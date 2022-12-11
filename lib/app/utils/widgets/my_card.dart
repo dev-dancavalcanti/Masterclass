@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:masterclass/app/controllers/app_controller.dart';
+import 'package:masterclass/app/controllers/url_controller.dart';
 import 'package:provider/provider.dart';
 
 class MyCard extends StatelessWidget {
@@ -12,7 +13,8 @@ class MyCard extends StatelessWidget {
       required this.title,
       required this.description,
       required this.icon,
-      required this.iconSize});
+      required this.iconSize,
+      required this.url});
 
   final String? stringMap;
   final int number;
@@ -21,10 +23,12 @@ class MyCard extends StatelessWidget {
   final String description;
   final String icon;
   final double iconSize;
+  final String url;
 
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<AppController>();
+    final urlController = context.watch<UrlController>();
     return Padding(
       padding: const EdgeInsets.only(bottom: 5, top: 5),
       child: Card(
@@ -93,7 +97,9 @@ class MyCard extends StatelessWidget {
                               MaterialStateProperty.all(Colors.transparent),
                           backgroundColor:
                               MaterialStateProperty.all(Colors.transparent)),
-                      onPressed: () {},
+                      onPressed: () {
+                        urlController.launchHttpsRepositorie(url);
+                      },
                       icon: SvgPicture.asset(
                         'assets/icons/home/github.svg',
                         color: Theme.of(context).highlightColor,

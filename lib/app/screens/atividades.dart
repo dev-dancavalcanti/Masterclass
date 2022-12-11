@@ -12,6 +12,7 @@ class Atividades extends StatelessWidget {
           itemCount: index,
           itemBuilder: (context, index) {
             return MyCard(
+              url: getCards(index)["url"],
               stringMap: getCards(index)["stringMap"],
               onTap: getCards(index)["onTap"],
               icon: getCards(index)["icon"],
@@ -38,7 +39,9 @@ Map<String, dynamic> getCards(
             "Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos",
         "number": 4,
         "onTap": "/pageList",
-        "stringMap": "animacao"
+        "stringMap": "animacao",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/animation"
       };
     case 1:
       return {
@@ -49,7 +52,9 @@ Map<String, dynamic> getCards(
             "Aplicação da técnica de leitura de mockup, contendo 2 exercícios",
         "number": 2,
         "onTap": "/pageList",
-        "stringMap": "mockup"
+        "stringMap": "mockup",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/mockups"
       };
     case 2:
       return {
@@ -59,6 +64,8 @@ Map<String, dynamic> getCards(
         "description": "Ambiente destinado a testes e estudos em geral",
         "number": 1,
         "onTap": "/play",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/playgroud"
       };
     case 3:
       return {
@@ -67,7 +74,9 @@ Map<String, dynamic> getCards(
         "title": "IMC",
         "description": "Calculo de IMC",
         "number": 1,
-        "onTap": "/bmi"
+        "onTap": "/bmi",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/bmi"
       };
     case 4:
       return {
@@ -77,7 +86,9 @@ Map<String, dynamic> getCards(
         "description": "Validador de CPF",
         "number": 1,
         "onTap": "/pageList",
-        "stringMap": "cpf"
+        "stringMap": "cpf",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/cpf",
       };
     case 5:
       return {
@@ -86,7 +97,9 @@ Map<String, dynamic> getCards(
         "title": "TODO",
         "description": "Consumo de API Todos",
         "number": 1,
-        "onTap": "/todo"
+        "onTap": "/todo",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/todos"
       };
     case 6:
       return {
@@ -95,7 +108,9 @@ Map<String, dynamic> getCards(
         "title": "BloC",
         "description": "Uso de BloC, consumo de API e scroll infinito",
         "number": 1,
-        "onTap": "/anime"
+        "onTap": "/anime",
+        "url":
+            "https://github.com/dev-dancavalcanti/Masterclass/tree/master/lib/bloc"
       };
 
     default:
