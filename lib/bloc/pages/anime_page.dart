@@ -139,13 +139,7 @@ class _AnimePageState extends State<AnimePage> {
                             url: animes[index].url,
                           );
                         } else {
-                          return Center(
-                              child: Shimmer.fromColors(
-                            baseColor: Theme.of(context).cardColor,
-                            highlightColor:
-                                Theme.of(context).scaffoldBackgroundColor,
-                            child: const CardShimmer(),
-                          ));
+                          return const CardShimmer();
                         }
                       },
                     ),
