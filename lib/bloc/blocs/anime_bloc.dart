@@ -1,9 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterclass/bloc/events/anime_events.dart';
+import 'package:masterclass/bloc/blocs/anime_events.dart';
 import 'package:masterclass/bloc/services/interface_anime.dart';
-import 'package:masterclass/bloc/states/anime_state.dart';
-
 import '../models/anime_model.dart';
+import 'anime_state.dart';
 
 class AnimeBloc extends Bloc<AnimeEvent, AnimeState> {
   final IClienteAnime repository;

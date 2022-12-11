@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/controllers/app_controller.dart';
-import 'package:masterclass/screens/repositorio.dart';
-import 'package:masterclass/screens/sobre_dev.dart';
-import 'package:masterclass/utils/components/app_bar.dart';
+import 'package:masterclass/app/controllers/app_controller.dart';
+import 'package:masterclass/app/screens/repositorio.dart';
+import 'package:masterclass/app/screens/sobre_dev.dart';
+import 'package:masterclass/app/utils/components/app_bar.dart';
 import 'package:provider/provider.dart';
 import '../utils/widgets/bottom_nav_bar.dart';
 import 'atividades.dart';

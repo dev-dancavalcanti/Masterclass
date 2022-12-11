@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/controllers/app_controller.dart';
-import 'package:masterclass/utils/components/app_bar.dart';
+import 'package:masterclass/app/controllers/app_controller.dart';
+import 'package:masterclass/app/utils/components/app_bar.dart';
 import 'package:provider/provider.dart';
 
 class PageListAtividades extends StatelessWidget {

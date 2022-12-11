@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/utils/widgets/my_card.dart';
+import 'package:masterclass/app/utils/widgets/my_card.dart';
 
 class Atividades extends StatelessWidget {
   const Atividades({super.key});

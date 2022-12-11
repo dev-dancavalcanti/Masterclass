@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:masterclass/controllers/url_controller.dart';
+import 'package:masterclass/app/controllers/url_controller.dart';
 import 'package:provider/provider.dart';
 
 class CardAnime extends StatelessWidget {

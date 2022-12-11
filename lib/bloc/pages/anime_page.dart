@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masterclass/bloc/blocs/anime_bloc.dart';
-import 'package:masterclass/bloc/components/card_animes.dart';
-import 'package:masterclass/bloc/events/anime_events.dart';
-import 'package:masterclass/bloc/states/anime_state.dart';
+import 'package:masterclass/bloc/utils/components/card_animes.dart';
+import 'package:masterclass/bloc/blocs/anime_events.dart';
+
 import 'package:shimmer/shimmer.dart';
+
+import '../blocs/anime_state.dart';
 
 class AnimePage extends StatefulWidget {
   const AnimePage({super.key});
