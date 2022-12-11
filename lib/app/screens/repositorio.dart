@@ -4,6 +4,8 @@ import 'package:masterclass/app/controllers/app_controller.dart';
 import 'package:masterclass/app/controllers/url_controller.dart';
 import 'package:provider/provider.dart';
 
+import '../utils/widgets/repository_empty.dart';
+
 class Repositorio extends StatelessWidget {
   const Repositorio({super.key});
 
@@ -58,20 +60,41 @@ class Repositorio extends StatelessWidget {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Column(
                                               children: [
-                                                Text(controller
-                                                    .repositoriesList[index]
-                                                    .name),
-                                                Text(controller
+                                                Padding(
+                                                  padding: const EdgeInsets
+                                                      .symmetric(vertical: 10),
+                                                  child: Text(
+                                                    controller
                                                         .repositoriesList[index]
-                                                        .description ??
-                                                    ''),
+                                                        .name,
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .headline1,
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          bottom: 10),
+                                                  child: Text(
+                                                    controller
+                                                            .repositoriesList[
+                                                                index]
+                                                            .description ??
+                                                        '',
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodyText1,
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
                                                 Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.end,
                                                   children: [
                                                     Container(
                                                       width: 100,
-                                                      height: 40,
+                                                      height: 35,
                                                       decoration: BoxDecoration(
                                                           color:
                                                               Theme.of(context)
@@ -112,7 +135,7 @@ class Repositorio extends StatelessWidget {
                                                                 .highlightColor,
                                                           ),
                                                           label: Text(
-                                                            'Acessar codigo fonte',
+                                                            'Codigo fonte',
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style: TextStyle(
@@ -135,38 +158,5 @@ class Repositorio extends StatelessWidget {
                 );
               }
             }));
-  }
-}
-
-class RepositoryEmpty extends StatelessWidget {
-  const RepositoryEmpty({super.key, required this.onPressed});
-
-  final void Function() onPressed;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          child: Image.asset(
-            'assets/images/home/githubb-rpng.png',
-            width: 400,
-          ),
-        ),
-        Text(
-          'Ooops, sorry!',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: Text(
-            'I don\'t have any repository at the moment!',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-        ),
-        ElevatedButton(onPressed: onPressed, child: const Text('Refresh'))
-      ],
-    );
   }
 }

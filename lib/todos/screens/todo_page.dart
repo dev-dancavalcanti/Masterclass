@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/controllers/app_controller.dart';
+import 'package:masterclass/app/controllers/app_controller.dart';
 import 'package:masterclass/todos/controllers/todo_controller.dart';
 import 'package:provider/provider.dart';
 
