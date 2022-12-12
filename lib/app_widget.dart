@@ -5,6 +5,7 @@ import 'package:masterclass/animation/pages/button_explicit_page.dart';
 import 'package:masterclass/animation/pages/button_implicit_page.dart';
 import 'package:masterclass/animation/pages/tile_explicit_page.dart';
 import 'package:masterclass/animation/pages/tile_implicit_page.dart';
+import 'package:masterclass/app/screens/splash_page.dart';
 import 'package:masterclass/bloc/blocs/anime_bloc.dart';
 import 'package:masterclass/bloc/pages/anime_page.dart';
 import 'package:masterclass/bloc/services/interface_anime.dart';
@@ -67,7 +68,8 @@ class _MyAppState extends State<MyApp> {
           darkTheme: DarkTheme.theme,
           initialRoute: '/',
           routes: {
-            '/': (context) => const HomePage(),
+            '/': (context) => const SplashPage(),
+            '/home': (context) => const HomePage(),
             '/pageList': (context) => const PageListAtividades(),
             '/tinder': (context) => const Tinder(),
             '/underControl': (context) => const UnderControl(),
