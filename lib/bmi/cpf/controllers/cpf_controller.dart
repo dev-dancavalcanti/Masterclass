@@ -6,11 +6,9 @@ class CpfController extends ChangeNotifier {
   bool? validator;
   TextEditingController cpfTextEdit = TextEditingController();
 
-  Future<bool> cpfValidator(value) async {
+  Future<void> cpfValidator(value) async {
     CpfModel cpfValidator = CpfModel();
-    bool result = await cpfValidator.isValid(value);
-    validator = result;
+    validator = await cpfValidator.isValid(value);
     notifyListeners();
-    return validator!;
   }
 }

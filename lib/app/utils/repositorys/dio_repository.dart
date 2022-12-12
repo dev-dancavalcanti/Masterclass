@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:masterclass/repositorys/interface_cliente.dart';
+import 'package:masterclass/app/utils/repositorys/interface_cliente.dart';
 import 'package:masterclass/app/utils/models/repository_model.dart';
 
 class RepositoriesService implements IHttpsClient {

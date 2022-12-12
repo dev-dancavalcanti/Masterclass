@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:masterclass/app/controllers/url_controller.dart';
 import 'package:provider/provider.dart';
 
+import '../utils/widgets/skill_widget.dart';
+
 class SobreDev extends StatelessWidget {
   const SobreDev({super.key});
 
@@ -193,52 +195,6 @@ class SobreDev extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SkillWidget extends StatelessWidget {
-  const SkillWidget({super.key, required this.title, required this.value});
-
-  final String title;
-  final double value;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
-      child: Row(
-        children: [
-          SizedBox(
-            width: 80,
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-          ),
-          const SizedBox(
-            width: 30,
-          ),
-          Expanded(
-            child: ClipRRect(
-              child: Container(
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(500)),
-                width: 100,
-                height: 10,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: LinearProgressIndicator(
-                    color: Theme.of(context).primaryColor,
-                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                    value: value,
-                  ),
-                ),
-              ),
-            ),
-          )
-        ],
       ),
     );
   }
