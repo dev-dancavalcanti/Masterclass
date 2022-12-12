@@ -17,7 +17,7 @@ class SobreDev extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 100),
+                padding: const EdgeInsets.only(top: 85),
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -158,38 +158,27 @@ class SobreDev extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline2,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 80),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Theme.of(context).cardColor,
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        SkillWidget(
-                          title: 'Dart/Flutter',
-                          value: 0.5,
-                        ),
-                        SkillWidget(
-                          title: 'GitHub',
-                          value: .3,
-                        ),
-                        SkillWidget(
-                          title: 'GitHub',
-                          value: .3,
-                        ),
-                        SkillWidget(
-                          title: 'GitHub',
-                          value: .3,
-                        ),
-                        SkillWidget(
-                          title: 'GitHub',
-                          value: .3,
-                        )
-                      ],
-                    ),
+              Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                color: Theme.of(context).cardColor,
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    children: const [
+                      SkillWidget(
+                        title: 'Dart/Flutter',
+                        value: 0.5,
+                      ),
+                      SkillWidget(
+                        title: 'Dart/Flutter',
+                        value: 0.5,
+                      ),
+                      SkillWidget(
+                        title: 'Dart/Flutter',
+                        value: 0.5,
+                      ),
+                    ],
                   ),
                 ),
               )
