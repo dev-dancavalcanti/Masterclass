@@ -19,10 +19,15 @@ class Repositorio extends StatelessWidget {
             builder: (context, child) {
               if (controller.repositoriesList.isEmpty) {
                 return controller.isLoading
-                    ? Center(
-                        child: CircularProgressIndicator(
-                          color: Theme.of(context).highlightColor,
-                        ),
+                    ? Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: CircularProgressIndicator(
+                              color: Theme.of(context).highlightColor,
+                            ),
+                          ),
+                        ],
                       )
                     : RepositoryEmpty(
                         onPressed: () {
@@ -31,8 +36,9 @@ class Repositorio extends StatelessWidget {
                       );
               } else {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       controller.isLoading
                           ? Center(
@@ -42,8 +48,7 @@ class Repositorio extends StatelessWidget {
                             )
                           : Expanded(
                               child: RefreshIndicator(
-                                displacement: 60.0,
-                                edgeOffset: 40,
+                                displacement: 40.0,
                                 onRefresh: () async {
                                   await controller.fetchRepositories();
                                 },
@@ -93,7 +98,7 @@ class Repositorio extends StatelessWidget {
                                                       MainAxisAlignment.end,
                                                   children: [
                                                     Container(
-                                                      width: 100,
+                                                      width: 110,
                                                       height: 35,
                                                       decoration: BoxDecoration(
                                                           color:
@@ -136,8 +141,8 @@ class Repositorio extends StatelessWidget {
                                                           ),
                                                           label: Text(
                                                             'Codigo fonte',
-                                                            textAlign: TextAlign
-                                                                .center,
+                                                            textAlign:
+                                                                TextAlign.start,
                                                             style: TextStyle(
                                                                 fontSize: 10,
                                                                 color: Theme.of(
