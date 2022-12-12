@@ -135,19 +135,16 @@ class Repositorio extends StatelessWidget {
                                                           },
                                                           icon: SvgPicture.asset(
                                                             'assets/icons/home/github.svg',
-                                                            color: Theme.of(
-                                                                    context)
-                                                                .highlightColor,
+                                                            color: Colors.white,
                                                           ),
-                                                          label: Text(
+                                                          label: const Text(
                                                             'Codigo fonte',
                                                             textAlign:
                                                                 TextAlign.start,
                                                             style: TextStyle(
                                                                 fontSize: 10,
-                                                                color: Theme.of(
-                                                                        context)
-                                                                    .highlightColor),
+                                                                color: Colors
+                                                                    .white),
                                                           )),
                                                     ),
                                                   ],
