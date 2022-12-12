@@ -178,6 +178,14 @@ class SobreDev extends StatelessWidget {
                         title: 'Dart/Flutter',
                         value: 0.5,
                       ),
+                      SkillWidget(
+                        title: 'Dart/Flutter',
+                        value: 0.5,
+                      ),
+                      SkillWidget(
+                        title: 'Dart/Flutter',
+                        value: 0.5,
+                      ),
                     ],
                   ),
                 ),
