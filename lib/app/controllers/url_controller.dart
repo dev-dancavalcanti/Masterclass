@@ -29,12 +29,18 @@ class UrlController {
 
   Future<void> launchWhatsApp() async {
     Uri uri = Uri.parse("whatsapp://send?phone=+5561999756973");
+    Uri uri2 = Uri.parse(
+        "https://api.whatsapp.com/send?phone=5561999756973&text=Ola%20Daniel%2C%20tudo%20bem%3F%20Podemos%20conversa%3F");
 
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(
-        uri,
-      );
-    } else {}
+    try {
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      }
+    } catch (e) {
+      if (await canLaunchUrl(uri2)) {
+        await launchUrl(uri2, mode: LaunchMode.externalApplication);
+      }
+    }
   }
 
   Future<void> launchEmail() async {
