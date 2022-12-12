@@ -17,6 +17,7 @@ class AnimeBloc extends Bloc<AnimeEvent, AnimeState> {
   Future<void> _fetchAnimed(event, emit) async {
     emit(LoadingAnimeState());
     try {
+      page = 1;
       animes = await repository.getToDos(page);
       emit(SucessAnimeState(animes));
     } catch (e, s) {
